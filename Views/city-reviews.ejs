@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="style.css">
+
+   <link rel="icon" href="favicon.ico" type="image/gif" sizes="16x16">
+    <title>City Rankers</title>
+    
+</head>
+<body>
+
+    <body >
+        <div class="wrapper">
+            <header class="header2">
+               <nav>
+                  <div class="menu-icon">
+                     <i class="fa fa-bars fa-2x"></i>
+                  </div>
+                  <a class="navbar-brand" href="#"><span>CITY</span> RANKERS</a>
+    
+                  <div class="menu">
+                     <ul>
+                        <li><a href="Home">Home</a></li>
+                        <li><a href="Register">Register</a></li>
+                        <li><a href="login">Sign in</a></li>
+                     </ul>
+                  </div>
+                  <div class="picture text">
+
+                  </div>
+               </nav>
+            </header>
+         </div>
+
+         <div class="content1">
+
+            <h1 class="header-content1"> <span>Madrid</span> Spain</h1>
+
+            <div class="content1-image">
+            <img src="madrid.jpg" alt="" width="750px" height="800px">
+            </div>
+
+            <div class="media border p-3">
+                <img src="mancity.jpg"  class="mr-3 mt-3 rounded-circle" alt="" height="20px" width="20px">
+                 <div class="media-body">
+                   <h4>John frisson <small><i>Lagts up 10 Februari, 2020</i></small></h4>
+                   <p class="size">Vet någon hur man använder de olika maskinerna för bentrännig i gymmet?</p>
+                   <div class="media p-3">
+                     <img src="avatar.png"Jane Doe class="mr-3 mt-3 rounded-circle" style="width:45px;">
+                     <div class="media-body">
+                       <h4>Patrick rosgård <small>(Admin) <i>Lagts up February 10 2020</i></small></h4>
+                       <p class="size">På de flesta maskinerna brukar det finnas bilder och text som förklarar hur du använder maskinen och vilka risker
+                          det finns, om det av någon anledning inte finns så kan du kolla med personalen på gymmet dem har säkert extra:)
+                       </p>
+                     </div>
+                   </div> 
+                 
+               
+             
+               <ol>
+                 <% for(let i = 0; i < message.length; i++) { %> 
+                     
+                       <div class="blog_post"></div>
+                       <img src="ninja.png" class="mr-3 mt-3 rounded-circle" height="20px" width="20px">
+                       <div class="media-body">
+                       <h4>I_only_bench_press <small><i>Lagts up February 11 2020</i></small></h4>
+                       <%- message[i].text %> 
+                     </div> 
+                   </div>
+               
+                 <% } %>
+                 </ol>
+             
+                 <div class="blogg_button">
+               <form action="/blogg" method="post">
+               <input type="text" name="message" placeholder="Skriv inlägg">
+               <button class="submit_button" type="submit">Lägg upp</button>
+               </form>
+             </div>
+             </div>
+             </div>
+         </div>
+
+    
+</body>
+</html>

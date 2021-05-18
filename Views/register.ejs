@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="js/bootstrap.js">
+    <link rel="stylesheet" href="style.css">
+    <title>City Rankers</title>
 </head>
-<body>
+<body class="register">
+     <div class="white">
     <h1>Register</h1>
+    </div>
     <form action="/register" method="POST">
         <div>
-            <label for="name"> Name</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" placeholder="Full name" required>
         </div>
         <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="Email@hotmail.com" required>
         </div>
-        <div>
-            <label for="password"> password</label>
-            <input type="password" name="password" id="password" required>
+        <div >
+            <input type="password" name="password" id="password" placeholder="Password" required>
         </div>
-        <button type="submit">Register</button>
+        <button type="submit" class="logging-in"> Register</button>
     </form>
-    <a href="/login">Login</a>
+    
+     <a href="/login" class="login-register">Alredy have a account?</a>
+    <p><br></p>
+    <a href="/Home" class="back-to-home">Back to homepage</a>
     
 </body>
 </html>
