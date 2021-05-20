@@ -28,13 +28,32 @@ app.get('/home', async (req, res) => {
 
 app.get('/city-reviews', async (req, res) => {
   const allMessages = await MessageModel.getAllMessages()
-  res.render('city-reviews.ejs', { message : allMessages});
+  const madridReviews = []
+  const tokyoReviews = []
+  for (let i = 0; i < allMessages.length; i++) {
+    const element = allMessages[i];
+    if(element.city === "Madrid")
+    {
+      madridReviews.push(element)
+    }
+    else if(element.city === "Tokyo")
+    {
+      tokyoReviews.push(element)
+    }
+  }
+  res.render('city-reviews.ejs', { tokyoReviews: tokyoReviews, madridReviews: madridReviews});
 });
 
-app.post('/city-reviews', async (req, res) => {
-  const message = await MessageModel.createMessage(req.body.email, req.body.message)
+app.post('/city-reviews-tokyo', async (req, res) => {
+  const message = await MessageModel.createMessage(req.body.email, req.body.message, "Tokyo")
   await dbmodule.store(message)
-  res.redirect('/')
+  res.redirect('/city-reviews')
+})
+
+app.post('/city-reviews-madrid', async (req, res) => {
+  const message = await MessageModel.createMessage(req.body.email, req.body.message, "Madrid")
+  await dbmodule.store(message)
+  res.redirect('/city-reviews')
 })
 
 app.post('/Home', async (req, res) => {
@@ -57,7 +76,7 @@ app.get('/register', async (req, res) => {
 
 app.post('/register', async (req, res) => {
   const hashedPassword = await bcrypt.hash(req.body.password, 10)
-  const user = await userModel.createUser(req.body.email, hashedPassword)
+  const user = await userModel.createUser(req.body.name, req.body.email, hashedPassword)
   await dbmodule.store(user)
   res.redirect('/register')
 })

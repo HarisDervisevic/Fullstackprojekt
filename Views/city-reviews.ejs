@@ -35,9 +35,6 @@
                         <li><a href="login">Sign in</a></li>
                      </ul>
                   </div>
-                  <div class="picture text">
-
-                  </div>
                </nav>
             </header>
          </div>
@@ -51,46 +48,201 @@
             </div>
 
             <div class="media border p-3">
-                <img src="mancity.jpg"  class="mr-3 mt-3 rounded-circle" alt="" height="20px" width="20px">
+                <img src="mother-512.png"  class="mr-3 mt-3 rounded-circle" alt="" height="20px" width="20px">
                  <div class="media-body">
-                   <h4>John frisson <small><i>Lagts up 10 Februari, 2020</i></small></h4>
-                   <p class="size">Vet någon hur man använder de olika maskinerna för bentrännig i gymmet?</p>
+                   <h4>Mum johanna <small><i>Lagts up 10 Februari, 2020</i></small></h4>
+                   <p class="size">I visited madrid and it was awesome alot to do and i was even able to help out with delivering food to the homeless. This city has alot to offer
+                      and i just cant wait to get the oppertunity to visit this city again. Awesome!!
+                   </p>
+                  </div>
+               </div>
                    <div class="media p-3">
-                     <img src="avatar.png"Jane Doe class="mr-3 mt-3 rounded-circle" style="width:45px;">
+                     <img src="uncle.png"Jane Doe class="mr-3 mt-3 rounded-circle" style="width:45px;">
                      <div class="media-body">
-                       <h4>Patrick rosgård <small>(Admin) <i>Lagts up February 10 2020</i></small></h4>
-                       <p class="size">På de flesta maskinerna brukar det finnas bilder och text som förklarar hur du använder maskinen och vilka risker
-                          det finns, om det av någon anledning inte finns så kan du kolla med personalen på gymmet dem har säkert extra:)
+                       <h4>Uncle Rasmus <small>(Experienced travler) <i>Lagts up February 10 2020</i></small></h4>
+                       <p class="size">
+                        We traveled to Madrid Spain for the first time at the End of Feb 2009. That a great time to go as its not hot and not cold the weather is wonderful. I would recommend going to Plaza Mayor in downtown as its fun to sit at a cafe and watch all the things going on around you. I did alot a research on place to go and shop. The best place to shop is downtown be sure to walk around the whole circle on both sides as 
+                        I did not and missed alot of cool stores. DO ride the Merto every where as the different parts of town have different atmosheres going on. I read before going to look up. You will miss alot of neat buildings if you dont. People in Spain are nice but if you got any where to eat they will take awhile to serve you. I think its because they have a hard time understanding english. Pointing at the menu worked great for us. I would recommend trying imberica ham and different cheeses they are wonderful. We had some 
+                        of the best coffee at Albes Cafe on the cornor of lopez de hoyes and manutano. 
+                        metro stop prosperidad. If you get a chance go there the wait staff are awesome.
                        </p>
                      </div>
                    </div> 
                  
-               
              
                <ol>
-                 <% for(let i = 0; i < message.length; i++) { %> 
+                 <% for(let i = 0; i < madridReviews.length; i++) { %> 
                      
                        <div class="blog_post"></div>
-                       <img src="ninja.png" class="mr-3 mt-3 rounded-circle" height="20px" width="20px">
+                       <img src="twitter-user.jpg" class="mr-3 mt-3 rounded-circle" height="20px" width="20px">
                        <div class="media-body">
-                       <h4>I_only_bench_press <small><i>Lagts up February 11 2020</i></small></h4>
-                       <%- message[i].text %> 
+                       <h4>YOU<small><i>Lagts up February 11 2020</i></small></h4>
+                       <%- madridReviews[i].text %> 
                      </div> 
-                   </div>
+                   
                
                  <% } %>
-                 </ol>
+               </ol>
              
-                 <div class="blogg_button">
-               <form action="/blogg" method="post">
-               <input type="text" name="message" placeholder="Skriv inlägg">
+                 <div class="review_button">
+               <form action="/city-reviews-madrid" method="post">
+               <textarea class="input-form"  name="message" placeholder="We want to hear what you think about the city, leave a review!!"rows="3" >HEJ</textarea>
                <button class="submit_button" type="submit">Lägg upp</button>
                </form>
              </div>
+             
+             
              </div>
-             </div>
-         </div>
+  
+             <div class="blank"></div>
 
+             <div class="content2">
+
+               <h1 class="header-content2"> <span>Tokyo</span> Japan</h1>
+   
+               <div class="content2-image">
+               <img src="tokyo.jpg" alt="" width="750px" height="800px">
+               </div>
+   
+               <div class="media border p-3">
+                   <img src="peter.jpeg"  class="mr-3 mt-3 rounded-circle" alt="" height="20px" width="20px">
+                    <div class="media-body">
+                      <h4>Peter Jacksson <small><i>Lagts up 10 Augusti, 2021</i></small></h4>
+                      <p class="size">Toyko is by far the cleanest city to which I have ever travelled. It is aso the largest and busiest city to which I have ever travelled. The amount of effort the people of Tokyo go to in order to ensure both sanity and sanitation is simply astounding.
+                        Sights one must visit while in Tokyo include Harajuku (shopping/fashion), Ueno (Ameyoko for cheap shopping / Ueno Park/zoo), Shibuya (area for young adults), and Shinjuku (nightlife / red light district).
+               
+                      </p>
+                     </div>
+                  </div>
+                      <div class="media p-3">
+                        <img src="pizza.jpg"Jane Doe class="mr-3 mt-3 rounded-circle" style="width:45px;">
+                        <div class="media-body">
+                          <h4>Mamma mia <small>(NEW TO CITY RANKERS) <i>Lagts up February 10 2020</i></small></h4>
+                          <p class="size">
+                           Reading this shows me that i have choosen the rigth city to go to, i have booked my fligth and hopefully i will have the same experience as you had. I dont know where exaclty im staying but just seeing the beutiful city is enougth for me and i hope to find it teh sam way you did. After my visit i will 100% write my review as i want to 
+                           inspire other like you did to me.
+                          </p>
+                        </div>
+                      </div> 
+                    
+                
+                  <ol>
+                    <% for(let i = 0; i < tokyoReviews.length; i++) { %> 
+                        
+                          <div class="blog_post"></div>
+                          <img src="twitter-user.jpg" class="mr-3 mt-3 rounded-circle" height="20px" width="20px">
+                          <div class="media-body">
+                          <h4>YOU<small><i>Lagts up February 11 2020</i></small></h4>
+                          <%- tokyoReviews[i].text %> 
+                        </div> 
+                      
+                  
+                    <% } %>
+                  </ol>
+                
+                    <div class="review_button">
+                  <form action="/city-reviews-tokyo" method="post">
+                  <textarea class="input-form"  name="message" placeholder="We want to hear what you think about the city, leave a review!!"rows="3" >HEJ</textarea>
+                  <button class="submit_button" type="submit">Lägg upp</button>
+                  </form>
+                </div>
+                
+                
+                </div>
+
+                <footer id="dk-footer" class="dk-footer">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-md-12 col-lg-4">
+                              <div class="dk-footer-box-info">
+                                  <a href="Home" class="footer-logo">
+                                      <img src="nigth.jpg" alt="footer_logo" class="img">
+                                  </a>
+                                  <p class="footer-info-text">
+                                     Our website strives to help out new people who like to travel around the world.
+                                  </p>
+                                  <div class="footer-social-link"></div>
+                               </div>
+                           
+                          </div>
+                       
+                          <div class="col-md-12 col-lg-8">
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <div class="contact-us">
+                                          <div class="contact-icon">
+                                              <i class="fa fa-map-o" aria-hidden="true"></i>
+                                          </div>
+                                          
+                                          <div class="contact-info">
+                                              <h3>Gothenburg Sweden</h3>
+                                              <p>4141 Kronhus Gatan 13</p>
+                                          </div>
+                                       
+                                      </div>
+                                      
+                                  </div>
+                              
+                                  <div class="col-md-6">
+                                      <div class="contact-us contact-us-last">
+                                          <div class="contact-icon">
+                                              <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                          </div>
+                                      
+                                          <div class="contact-info">
+                                              <h3>+76 413 22 74</h3>
+                                              <p>Give us a call</p>
+                                          </div>
+                                         
+                                      </div>
+                                 
+                                  </div>
+                                
+                              </div>
+                            
+                              <div class="row">
+                                  <div class="col-md-12 col-lg-6">
+                                      <div class="footer-widget footer-left-widget">
+                                          <div class="section-heading">
+                                              <h3>Useful Links</h3>
+                                          </div>
+                                          <ul>
+                                              <li>
+                                                  <a href="Home">Home</a>
+                                              </li>
+                                              <li>
+                                                  <a href="login">Sign in</a>
+                                              </li>
+                                              <li>
+                                                  <a href="CityReviews">Reviews</a>
+                                              </li>
+                                             
+                                      </div>
+                                      
+                                  </div>
+                                 
+                                  <div class="col-md-12 col-lg-6">
+                                      <div class="footer-widget"></div>
+                                          <div class="section-heading">
+                                              <h3>Recruit your friends</h3>
+                                              
+                                          </div>
+                                          <p>
+                                          Show all of your traveling friends what this website has to show</p>
+                                          
+                                      </div>
+                                      
+                                  </div>
+                                 
+                              </div>
+                            
+                          </div>
+                         
+                      </div>
+                     
+                  </div>
+                 
+          </footer>
     
 </body>
 </html>
